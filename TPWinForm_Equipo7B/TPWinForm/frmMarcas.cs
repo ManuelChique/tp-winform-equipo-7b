@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPWinForm
 {
-    public partial class Form1 : Form
+    public partial class frmMarcas : Form
     {
-        public Form1()
+        public frmMarcas()
         {
             InitializeComponent();
         }

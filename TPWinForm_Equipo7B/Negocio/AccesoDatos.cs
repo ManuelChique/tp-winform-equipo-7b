@@ -18,6 +18,8 @@ namespace Negocio
             get { return lector; }
         }
 
+        
+
         //Centralizamos la cadena de conexion.
         public AccesoDatos()
         {
@@ -73,6 +75,20 @@ namespace Negocio
             conexion.Close();
         }
 
+        public int ejecutarScalar()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                int cantidad = (int)comando.ExecuteScalar();
+                return cantidad;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
 
 
