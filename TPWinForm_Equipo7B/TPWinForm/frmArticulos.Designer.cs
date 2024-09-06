@@ -51,6 +51,7 @@
             this.chkbVerDetalle.TabIndex = 26;
             this.chkbVerDetalle.Text = "Ver Detalle";
             this.chkbVerDetalle.UseVisualStyleBackColor = true;
+            this.chkbVerDetalle.CheckedChanged += new System.EventHandler(this.chkbVerDetalle_CheckedChanged);
             // 
             // txtFiltro
             // 
@@ -118,12 +119,13 @@
             this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.Size = new System.Drawing.Size(547, 244);
             this.dgvArticulos.TabIndex = 19;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // frmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 469);
             this.Controls.Add(this.chkbVerDetalle);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.pbxArticulo);
@@ -133,7 +135,9 @@
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "frmArticulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmArticulos";
+            this.Load += new System.EventHandler(this.frmArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
