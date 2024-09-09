@@ -40,7 +40,7 @@ namespace Negocio
             try
             {
                 conexion.Open();
-                lector = comando.ExecuteReader();
+                lector = comando.ExecuteReader();//ExecuteReader(): Ejecuta la consulta que pusiste con setearConsulta y guarda los datos en el lector, que es como una tabla de resultados.
             }
             catch (Exception ex)
             {
@@ -48,7 +48,7 @@ namespace Negocio
             }
         }
 
-        public void ejecutarAccion()
+        public void ejecutarAccion() //Este método es para ejecutar acciones en la base de datos que no devuelven datos, como INSERT, UPDATE, o DELETE.
         {
             comando.Connection = conexion;
             try

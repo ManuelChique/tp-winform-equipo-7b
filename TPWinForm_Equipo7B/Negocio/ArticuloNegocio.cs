@@ -14,6 +14,10 @@ namespace Negocio
     public class ArticuloNegocio
     {
 
+
+
+
+
         public List<Articulo> listar()
         {
 
@@ -95,13 +99,6 @@ namespace Negocio
 
          
         }
-
-
-        //metodo agregar, modificar, eliminar...
-
-       
-
-
         public void agregar(Articulo nuevo)
         {
             AccesoDatos datos  =  new AccesoDatos();
@@ -132,11 +129,6 @@ namespace Negocio
 
 
         }
-
-
-     
-
-
         public void eliminar(int id)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -157,7 +149,91 @@ namespace Negocio
 
 
         }
+        public void modificar(Articulo modificar) 
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Precio = @Precio, Descripcion = @Descripcion WHERE Id = @Id");
+                datos.setearParametro("@Id", modificar.ID);
+                datos.setearParametro("@Codigo", modificar.Codigo);
+                datos.setearParametro("@Nombre", modificar.Nombre);
+                datos.setearParametro("@Descripcion", modificar.Descripcion);
+                datos.setearParametro("@Precio", modificar.Precio);
 
+
+                datos.cerrarConexion();
+                datos.ejecutarAccion();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { datos.cerrarConexion();}
+        }
+
+
+
+     
+
+
+
+
+
+        public void modificarCategoriaArticulo(Articulo modificar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS SET IdCategoria = @IdCategoria WHERE Id = @IdArticulo");
+                datos.setearParametro("@IdArticulo", modificar.ID);
+                datos.setearParametro("@IdCategoria", modificar.Categoria.ID);
+                datos.cerrarConexion();
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void modificarMarcaArticulo(Articulo modificar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS SET IdMarca = @IdMarca WHERE Id = @IdArticulo");
+                datos.setearParametro("@IdArticulo", modificar.ID);
+                datos.setearParametro("@IdMarca", modificar.Marca.ID);
+                datos.cerrarConexion();
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void modificarImagenArticulo(Articulo modificar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = (SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = @IdA)");
+                datos.setearParametro("@IdA", modificar.ID);
+                datos.setearParametro("@ImagenUrl", modificar.UrlImagen);
+                datos.cerrarConexion();
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
 
 
