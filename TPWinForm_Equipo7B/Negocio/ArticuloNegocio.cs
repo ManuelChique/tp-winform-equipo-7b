@@ -17,8 +17,8 @@ namespace Negocio
         public List<Articulo> listar()
         {
 
-            List<Articulo> lista = new List<Articulo>(); //instancio mi lista;
-            AccesoDatos datos = new AccesoDatos(); // instancio mi conexion;
+            List<Articulo> lista = new List<Articulo>(); //Se crea una lista vacía de Articulo que se irá llenando con los datos de la base de datos.
+            AccesoDatos datos = new AccesoDatos(); // Se crea una instancia de la clase AccesoDatos, que maneja la conexión y ejecución de consultas a la base de datos.
 
             try
             {
@@ -95,11 +95,80 @@ namespace Negocio
 
          
         }
-    
-    
+
+
         //metodo agregar, modificar, eliminar...
-    
-    
-    
+
+       
+
+
+        public void agregar(Articulo nuevo)
+        {
+            AccesoDatos datos  =  new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria ) VALUES (@Codigo, @Nombre, @Descripcion,@Precio, @IdMarca, @IdCategoria)");
+                datos.setearParametro("@Codigo", nuevo.Codigo);
+                datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Descripcion", nuevo.Descripcion);
+                datos.setearParametro("@Precio", nuevo.Precio);
+                datos.setearParametro("@IdMarca", nuevo.Marca.ID);
+                datos.setearParametro("@IdCategoria", nuevo.Categoria.ID);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+
+                datos.cerrarConexion();
+            }
+
+
+
+        }
+
+
+     
+
+
+        public void eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("DELETE FROM Articulos WHERE Id = @Id");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { datos.cerrarConexion();}
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
