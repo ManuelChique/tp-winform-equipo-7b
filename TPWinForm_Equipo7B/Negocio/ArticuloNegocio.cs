@@ -93,12 +93,12 @@ namespace Negocio
             }
 
 
+        }
 
 
 
 
          
-        }
         public void agregar(Articulo nuevo)
         {
             AccesoDatos datos  =  new AccesoDatos();
@@ -238,7 +238,30 @@ namespace Negocio
 
 
 
+        public void agregarImagen(Articulo nuevoArticulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Articulo articulo = new Articulo();
+            articulo = listar().Last();
 
+            try
+            {
+                int idArticulo = articulo.ID;
+                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
+                datos.setearParametro("@IdArticulo", idArticulo);
+                datos.setearParametro("@ImagenUrl", nuevoArticulo.UrlImagen);
+                datos.cerrarConexion();
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
 
 

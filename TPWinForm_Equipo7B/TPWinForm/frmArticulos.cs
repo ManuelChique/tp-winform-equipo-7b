@@ -102,8 +102,28 @@ namespace TPWinForm
             }
         }
 
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            frmAltaArticulos alta = new frmAltaArticulos(); 
+            alta.ShowDialog();
+            cargar();
+        }
 
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado;
+                seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
-
+                frmAltaArticulos modificar = new frmAltaArticulos(seleccionado);
+                modificar.ShowDialog();
+                cargar();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun articulo para modificar");
+            }
+        }
     }
 }

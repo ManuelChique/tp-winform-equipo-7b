@@ -99,6 +99,7 @@
             this.btnModificarArticulo.TabIndex = 21;
             this.btnModificarArticulo.Text = "Modificar";
             this.btnModificarArticulo.UseVisualStyleBackColor = true;
+            this.btnModificarArticulo.Click += new System.EventHandler(this.btnModificarArticulo_Click);
             // 
             // btnAgregarArticulo
             // 
@@ -109,6 +110,7 @@
             this.btnAgregarArticulo.TabIndex = 20;
             this.btnAgregarArticulo.Text = "Agregar";
             this.btnAgregarArticulo.UseVisualStyleBackColor = true;
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
             // 
             // dgvArticulos
             // 
