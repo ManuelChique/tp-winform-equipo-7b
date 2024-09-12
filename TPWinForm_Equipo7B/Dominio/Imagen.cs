@@ -11,10 +11,16 @@ namespace Dominio
         public Imagen()
         {
             IDArticulo = 0;
-            URLImagen = "";
+            ImagenUrl = "";
         }
+        
+
+        public int ID { get; set; } 
+
         public int IDArticulo { get; set; }
-        public string URLImagen { get; set; }
+        public string ImagenUrl { get; set; }
+
+
 
 
 

@@ -55,7 +55,7 @@
             this.pbxAltaArticulo.Location = new System.Drawing.Point(287, 12);
             this.pbxAltaArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.pbxAltaArticulo.Name = "pbxAltaArticulo";
-            this.pbxAltaArticulo.Size = new System.Drawing.Size(246, 333);
+            this.pbxAltaArticulo.Size = new System.Drawing.Size(246, 386);
             this.pbxAltaArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAltaArticulo.TabIndex = 29;
             this.pbxAltaArticulo.TabStop = false;
