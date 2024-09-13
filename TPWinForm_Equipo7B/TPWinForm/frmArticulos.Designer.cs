@@ -63,12 +63,13 @@
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(200, 20);
             this.txtFiltro.TabIndex = 25;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // pbxArticulo
             // 
             this.pbxArticulo.Location = new System.Drawing.Point(581, 56);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(275, 296);
+            this.pbxArticulo.Size = new System.Drawing.Size(286, 296);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 24;
             this.pbxArticulo.TabStop = false;
@@ -93,6 +94,7 @@
             this.btnEliminarArticulo.TabIndex = 22;
             this.btnEliminarArticulo.Text = "Eliminar";
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
             // btnModificarArticulo
             // 
@@ -135,19 +137,19 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(731, 360);
+            this.btnSiguiente.Location = new System.Drawing.Point(763, 360);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnSiguiente.Size = new System.Drawing.Size(104, 45);
             this.btnSiguiente.TabIndex = 27;
-            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.Text = "Otra Imagen";
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(622, 360);
+            this.btnAnterior.Location = new System.Drawing.Point(596, 360);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(75, 23);
+            this.btnAnterior.Size = new System.Drawing.Size(103, 45);
             this.btnAnterior.TabIndex = 28;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;

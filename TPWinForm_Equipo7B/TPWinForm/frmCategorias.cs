@@ -16,5 +16,10 @@ namespace TPWinForm
         {
             InitializeComponent();
         }
+
+        private void frmCategorias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

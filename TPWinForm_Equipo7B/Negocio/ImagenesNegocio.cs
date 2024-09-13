@@ -10,6 +10,8 @@ namespace Negocio
     public class ImagenesNegocio
     {
 
+
+        
         public List<string>listar(int idArticulo)
         {
             List<string> lista = new List<string>(); 
