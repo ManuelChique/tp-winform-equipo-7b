@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace TPWinForm
 {
@@ -18,6 +20,7 @@ namespace TPWinForm
 
 
         private Articulo articulo = null; //(1)
+        private OpenFileDialog archivo = null;   
 
 
         public frmAltaArticulos()
@@ -198,9 +201,23 @@ namespace TPWinForm
                 else
                 {
                     negocio.agregar(articulo); // Agrega el artículo a la BD.
-                    negocio.agregarImagen(articulo); // Agrega la imagen del artículo.
+                    
+                    negocio.agregarImagen(articulo); // Agrega la imagen del artículo. Recordemos que en mi BD la urlImagen esta en Imagenes no en Articulo.
+
+
                     MessageBox.Show("Articulo agregado correctamente"); // Muestra mensaje de éxito.
                 }
+
+
+                //Guardo imagen si la levanto localmente.
+                if (archivo != null && !(txtUrlImagen.Text.ToUpper().Contains("HTTP") ) )
+                {
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+                }
+
+
+
+
 
                 Close(); // Cierra el formulario después de la operación.
             }
@@ -213,13 +230,29 @@ namespace TPWinForm
 
 
         }
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+        //Subir imagen de manera local.
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            //OpenFileDialog archivo = new OpenFileDialog(); // me genera una ventana de dialogo para elegir la imagen.
+            archivo.Filter = "jpg|*.jpg"; // filtrar que tipo de archvio me permite
+            if(archivo.ShowDialog() == DialogResult.OK) //ESTO  ME PERMITE CAPTURAR EL ARCHIVO.
+            {
+                txtUrlImagen.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+
+
+                //Guardo lA IMG
+              //  File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+
+
+            }
+
+        }
+
+
+
     }
 }

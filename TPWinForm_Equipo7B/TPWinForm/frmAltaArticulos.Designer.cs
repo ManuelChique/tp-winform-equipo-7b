@@ -46,16 +46,17 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAltaArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxAltaArticulo
             // 
             this.pbxAltaArticulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxAltaArticulo.Location = new System.Drawing.Point(287, 12);
+            this.pbxAltaArticulo.Location = new System.Drawing.Point(315, 41);
             this.pbxAltaArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.pbxAltaArticulo.Name = "pbxAltaArticulo";
-            this.pbxAltaArticulo.Size = new System.Drawing.Size(246, 386);
+            this.pbxAltaArticulo.Size = new System.Drawing.Size(218, 307);
             this.pbxAltaArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAltaArticulo.TabIndex = 29;
             this.pbxAltaArticulo.TabStop = false;
@@ -66,7 +67,7 @@
             this.txtUrlImagen.Margin = new System.Windows.Forms.Padding(4);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(160, 20);
-            this.txtUrlImagen.TabIndex = 19;
+            this.txtUrlImagen.TabIndex = 3;
             this.txtUrlImagen.Leave += new System.EventHandler(this.txtUrlImagen_Leave);
             // 
             // lblUrlImagen
@@ -110,7 +111,7 @@
             this.cboCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(160, 21);
-            this.cboCategoria.TabIndex = 23;
+            this.cboCategoria.TabIndex = 6;
             // 
             // cboMarca
             // 
@@ -120,7 +121,7 @@
             this.cboMarca.Margin = new System.Windows.Forms.Padding(4);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(160, 21);
-            this.cboMarca.TabIndex = 22;
+            this.cboMarca.TabIndex = 5;
             // 
             // btnCancelar
             // 
@@ -133,7 +134,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(142, 57);
-            this.btnCancelar.TabIndex = 26;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -148,7 +149,7 @@
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(168, 57);
-            this.btnAceptar.TabIndex = 24;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -158,7 +159,7 @@
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(160, 20);
-            this.txtPrecio.TabIndex = 21;
+            this.txtPrecio.TabIndex = 4;
             // 
             // txtNombre
             // 
@@ -166,7 +167,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(160, 20);
-            this.txtNombre.TabIndex = 16;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
@@ -174,7 +175,7 @@
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(160, 20);
-            this.txtDescripcion.TabIndex = 18;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // txtCodigo
             // 
@@ -182,7 +183,7 @@
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(160, 20);
-            this.txtCodigo.TabIndex = 14;
+            this.txtCodigo.TabIndex = 0;
             // 
             // lblPrecio
             // 
@@ -228,11 +229,22 @@
             this.lblNombre.TabIndex = 13;
             this.lblNombre.Text = "Nombre:";
             // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.Location = new System.Drawing.Point(274, 174);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(35, 23);
+            this.btnAgregarImagen.TabIndex = 30;
+            this.btnAgregarImagen.Text = "+";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            // 
             // frmAltaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(546, 606);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.pbxAltaArticulo);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblUrlImagen);
@@ -279,5 +291,6 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnAgregarImagen;
     }
 }
