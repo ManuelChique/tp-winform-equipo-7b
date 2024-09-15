@@ -41,7 +41,7 @@ namespace TPWinForm
             // btnEliminarCategorias
             // 
             this.btnEliminarCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarCategorias.Location = new System.Drawing.Point(286, 367);
+            this.btnEliminarCategorias.Location = new System.Drawing.Point(252, 351);
             this.btnEliminarCategorias.Name = "btnEliminarCategorias";
             this.btnEliminarCategorias.Size = new System.Drawing.Size(111, 37);
             this.btnEliminarCategorias.TabIndex = 19;
@@ -52,7 +52,7 @@ namespace TPWinForm
             // btnModificarCategorias
             // 
             this.btnModificarCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarCategorias.Location = new System.Drawing.Point(148, 367);
+            this.btnModificarCategorias.Location = new System.Drawing.Point(135, 351);
             this.btnModificarCategorias.Name = "btnModificarCategorias";
             this.btnModificarCategorias.Size = new System.Drawing.Size(111, 37);
             this.btnModificarCategorias.TabIndex = 18;
@@ -63,7 +63,7 @@ namespace TPWinForm
             // btnAgregarCategorias
             // 
             this.btnAgregarCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarCategorias.Location = new System.Drawing.Point(12, 367);
+            this.btnAgregarCategorias.Location = new System.Drawing.Point(18, 351);
             this.btnAgregarCategorias.Name = "btnAgregarCategorias";
             this.btnAgregarCategorias.Size = new System.Drawing.Size(111, 37);
             this.btnAgregarCategorias.TabIndex = 17;
@@ -74,7 +74,7 @@ namespace TPWinForm
             // dgvCategorias
             // 
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Location = new System.Drawing.Point(12, 101);
+            this.dgvCategorias.Location = new System.Drawing.Point(18, 101);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.RowHeadersWidth = 51;
@@ -85,17 +85,17 @@ namespace TPWinForm
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.BackColor = System.Drawing.Color.White;
-            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(8, 60);
+            this.lblCategoria.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(14, 56);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(181, 24);
+            this.lblCategoria.Size = new System.Drawing.Size(199, 24);
             this.lblCategoria.TabIndex = 25;
             this.lblCategoria.Text = "Buscar Categoria :";
             // 
             // txtFiltroCategoria
             // 
-            this.txtFiltroCategoria.Location = new System.Drawing.Point(220, 66);
+            this.txtFiltroCategoria.Location = new System.Drawing.Point(219, 60);
             this.txtFiltroCategoria.Name = "txtFiltroCategoria";
             this.txtFiltroCategoria.Size = new System.Drawing.Size(176, 20);
             this.txtFiltroCategoria.TabIndex = 26;
@@ -117,6 +117,7 @@ namespace TPWinForm
             this.MaximumSize = new System.Drawing.Size(816, 486);
             this.MinimumSize = new System.Drawing.Size(816, 486);
             this.Name = "frmCategorias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.frmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();

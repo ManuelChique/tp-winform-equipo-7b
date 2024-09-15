@@ -51,7 +51,7 @@
             // 
             this.lblAdministracion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAdministracion.AutoSize = true;
-            this.lblAdministracion.BackColor = System.Drawing.Color.White;
+            this.lblAdministracion.BackColor = System.Drawing.SystemColors.Control;
             this.lblAdministracion.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdministracion.Location = new System.Drawing.Point(136, 168);
             this.lblAdministracion.Name = "lblAdministracion";
@@ -68,7 +68,7 @@
             this.btnCategorias.FlatAppearance.BorderSize = 0;
             this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.Location = new System.Drawing.Point(561, 269);
+            this.btnCategorias.Location = new System.Drawing.Point(558, 269);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(201, 71);
             this.btnCategorias.TabIndex = 8;
@@ -84,7 +84,7 @@
             this.btnMarcas.FlatAppearance.BorderSize = 0;
             this.btnMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarcas.Location = new System.Drawing.Point(34, 269);
+            this.btnMarcas.Location = new System.Drawing.Point(46, 269);
             this.btnMarcas.Name = "btnMarcas";
             this.btnMarcas.Size = new System.Drawing.Size(201, 71);
             this.btnMarcas.TabIndex = 7;
@@ -100,7 +100,7 @@
             this.btnArticulos.FlatAppearance.BorderSize = 0;
             this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulos.Location = new System.Drawing.Point(281, 269);
+            this.btnArticulos.Location = new System.Drawing.Point(298, 269);
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(201, 71);
             this.btnArticulos.TabIndex = 6;
@@ -118,8 +118,8 @@
             this.Controls.Add(this.btnArticulos);
             this.Controls.Add(this.lblAdministracion);
             this.Controls.Add(this.lblCatalogo);
-            this.MaximumSize = new System.Drawing.Size(849, 661);
-            this.MinimumSize = new System.Drawing.Size(669, 508);
+            this.MaximumSize = new System.Drawing.Size(816, 508);
+            this.MinimumSize = new System.Drawing.Size(816, 508);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

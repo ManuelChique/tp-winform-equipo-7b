@@ -41,7 +41,7 @@ namespace TPWinForm
             // dgvMarcas
             // 
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Location = new System.Drawing.Point(6, 100);
+            this.dgvMarcas.Location = new System.Drawing.Point(18, 101);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.ReadOnly = true;
             this.dgvMarcas.RowHeadersWidth = 51;
@@ -52,18 +52,18 @@ namespace TPWinForm
             // lblMarcas
             // 
             this.lblMarcas.AutoSize = true;
-            this.lblMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(234)))), ((int)(((byte)(192)))));
-            this.lblMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcas.Location = new System.Drawing.Point(6, 60);
+            this.lblMarcas.BackColor = System.Drawing.SystemColors.Control;
+            this.lblMarcas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarcas.Location = new System.Drawing.Point(14, 56);
             this.lblMarcas.Name = "lblMarcas";
-            this.lblMarcas.Size = new System.Drawing.Size(151, 25);
+            this.lblMarcas.Size = new System.Drawing.Size(156, 24);
             this.lblMarcas.TabIndex = 2;
             this.lblMarcas.Text = "Buscar Marca:";
             // 
             // btnAgregarMarcas
             // 
             this.btnAgregarMarcas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarMarcas.Location = new System.Drawing.Point(18, 367);
+            this.btnAgregarMarcas.Location = new System.Drawing.Point(18, 351);
             this.btnAgregarMarcas.Name = "btnAgregarMarcas";
             this.btnAgregarMarcas.Size = new System.Drawing.Size(111, 37);
             this.btnAgregarMarcas.TabIndex = 3;
@@ -74,7 +74,7 @@ namespace TPWinForm
             // btnModificarMarcas
             // 
             this.btnModificarMarcas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarMarcas.Location = new System.Drawing.Point(148, 367);
+            this.btnModificarMarcas.Location = new System.Drawing.Point(135, 351);
             this.btnModificarMarcas.Name = "btnModificarMarcas";
             this.btnModificarMarcas.Size = new System.Drawing.Size(111, 37);
             this.btnModificarMarcas.TabIndex = 4;
@@ -85,7 +85,7 @@ namespace TPWinForm
             // btnEliminarMarcas
             // 
             this.btnEliminarMarcas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarMarcas.Location = new System.Drawing.Point(286, 367);
+            this.btnEliminarMarcas.Location = new System.Drawing.Point(252, 351);
             this.btnEliminarMarcas.Name = "btnEliminarMarcas";
             this.btnEliminarMarcas.Size = new System.Drawing.Size(111, 37);
             this.btnEliminarMarcas.TabIndex = 5;
@@ -116,6 +116,7 @@ namespace TPWinForm
             this.MaximumSize = new System.Drawing.Size(816, 486);
             this.MinimumSize = new System.Drawing.Size(816, 486);
             this.Name = "frmMarcas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";
             this.Load += new System.EventHandler(this.frmMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();

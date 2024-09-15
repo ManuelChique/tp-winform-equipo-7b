@@ -275,6 +275,8 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNombre);
+            this.MaximumSize = new System.Drawing.Size(562, 645);
+            this.MinimumSize = new System.Drawing.Size(562, 645);
             this.Name = "frmAltaArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulo";
