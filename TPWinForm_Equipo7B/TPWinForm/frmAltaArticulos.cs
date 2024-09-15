@@ -64,13 +64,13 @@ namespace TPWinForm
         private void frmAltaArticulos_Load(object sender, EventArgs e)
         {
 
-            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            MarcasNegocio marcasNegocio = new MarcasNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
 
             try
             {
-                cboMarca.DataSource = marcaNegocio.listar();  // Se establece como fuente de datos del ComboBox 'cboMarca' una lista de marcas obtenida del método 'listar'
+                cboMarca.DataSource = marcasNegocio.listar();  // Se establece como fuente de datos del ComboBox 'cboMarca' una lista de marcas obtenida del método 'listar'
                                                               // de la clase MarcaNegocio.
 
                 cboMarca.ValueMember = "Descripcion"; // Se especifica que el valor interno del ComboBox será la propiedad 'Descripcion' de cada marca. (VALOR)

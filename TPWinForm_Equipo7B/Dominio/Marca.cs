@@ -21,9 +21,6 @@ namespace Dominio
             ID = id;
             Descripcion = nombre;
         }
-      
-        
-        
         public int ID { get; set; }
         public string Descripcion { get; set; }
 
@@ -31,8 +28,5 @@ namespace Dominio
         {
             return Descripcion;
         }
-
-
-
     }
 }
