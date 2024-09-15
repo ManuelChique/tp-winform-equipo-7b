@@ -33,16 +33,18 @@
             this.btnCategorias = new System.Windows.Forms.Button();
             this.btnMarcas = new System.Windows.Forms.Button();
             this.btnArticulos = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCatalogo
             // 
             this.lblCatalogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCatalogo.AutoSize = true;
-            this.lblCatalogo.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCatalogo.Location = new System.Drawing.Point(264, 96);
+            this.lblCatalogo.Font = new System.Drawing.Font("Javanese Neu", 72F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCatalogo.Location = new System.Drawing.Point(238, 121);
             this.lblCatalogo.Name = "lblCatalogo";
-            this.lblCatalogo.Size = new System.Drawing.Size(212, 60);
+            this.lblCatalogo.Size = new System.Drawing.Size(333, 105);
             this.lblCatalogo.TabIndex = 4;
             this.lblCatalogo.Text = "CATALOGO";
             this.lblCatalogo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -52,10 +54,10 @@
             this.lblAdministracion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAdministracion.AutoSize = true;
             this.lblAdministracion.BackColor = System.Drawing.SystemColors.Control;
-            this.lblAdministracion.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdministracion.Location = new System.Drawing.Point(136, 168);
+            this.lblAdministracion.Font = new System.Drawing.Font("Perpetua", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdministracion.Location = new System.Drawing.Point(292, 226);
             this.lblAdministracion.Name = "lblAdministracion";
-            this.lblAdministracion.Size = new System.Drawing.Size(484, 64);
+            this.lblAdministracion.Size = new System.Drawing.Size(244, 33);
             this.lblAdministracion.TabIndex = 5;
             this.lblAdministracion.Text = "ADMINISTRACION:";
             this.lblAdministracion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -68,7 +70,7 @@
             this.btnCategorias.FlatAppearance.BorderSize = 0;
             this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.Location = new System.Drawing.Point(558, 269);
+            this.btnCategorias.Location = new System.Drawing.Point(552, 269);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(201, 71);
             this.btnCategorias.TabIndex = 8;
@@ -108,11 +110,24 @@
             this.btnArticulos.UseVisualStyleBackColor = false;
             this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.ErrorImage = global::TPWinForm.Properties.Resources.logoUTN;
+            this.pictureBox1.Image = global::TPWinForm.Properties.Resources.logoUTN;
+            this.pictureBox1.InitialImage = global::TPWinForm.Properties.Resources.logoUTN;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(197, 58);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 469);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCategorias);
             this.Controls.Add(this.btnMarcas);
             this.Controls.Add(this.btnArticulos);
@@ -123,6 +138,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +151,7 @@
         private System.Windows.Forms.Button btnCategorias;
         private System.Windows.Forms.Button btnMarcas;
         private System.Windows.Forms.Button btnArticulos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
