@@ -54,6 +54,12 @@
     <Compile Include="frmAltaArticulos.Designer.cs">
       <DependentUpon>frmAltaArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAltaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaCategorias.Designer.cs">
+      <DependentUpon>frmAltaCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAltaMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAltaArticulos.resx">
       <DependentUpon>frmAltaArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltaCategorias.resx">
+      <DependentUpon>frmAltaCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltaMarcas.resx">
       <DependentUpon>frmAltaMarcas.cs</DependentUpon>

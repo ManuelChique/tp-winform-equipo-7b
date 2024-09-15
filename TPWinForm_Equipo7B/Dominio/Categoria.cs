@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Dominio
+
 {
     public class Categoria
     {
-
-
-        public Categoria()
+        //Agrego los constructores, uno sin parametros que se carga vacio 
+        //y otro con los parametros que se le carguen.
+       public Categoria()
         {
             ID = 0;
             Descripcion = "";
@@ -20,11 +21,6 @@ namespace Dominio
             ID = id;
             Descripcion = descripcion;
         }
-
-
-
-
-
         public int ID { get; set; }
         public string Descripcion { get; set; }
 
